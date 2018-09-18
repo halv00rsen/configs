@@ -1,0 +1,8 @@
+[user]
+	email = jorgen.aunet.halvorsen@gmail.com
+	name = Jørgen Halvorsen
+	signingkey = 5619D2DC
+[push]
+	default = simple
+[commit]
+	gpgsign = true
