@@ -45,5 +45,10 @@
         "javascript",
         "javascriptreact",
         "vue"
-    ]
+    ],
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideTabs": false,
+    "cSpell.language": "en,en-GB"
 }

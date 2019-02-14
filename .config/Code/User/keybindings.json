@@ -166,17 +166,7 @@
         "when": "editorTextFocus && vim.active"
     },
     {
-        "key": "ctrl+alt+p",
-        "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
-        "when": "inFilesPicker && inQuickOpen"
-    },
-    {
-        "key": "ctrl+shift+p",
-        "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
-        "when": "inFilesPicker && inQuickOpen"
-    },
-    {
-        "key": "ctrl+k",
+        "key": "ctrl+m",
         "command": "workbench.action.nextEditor"
     },
     {
@@ -184,11 +174,31 @@
         "command": "-workbench.action.nextEditor"
     },
     {
-        "key": "ctrl+j",
+        "key": "ctrl+n",
         "command": "workbench.action.previousEditor"
     },
     {
         "key": "ctrl+pageup",
         "command": "-workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "-editor.action.toggleTabFocusMode"
+    },
+    {
+        "key": "ctrl+[Comma]",
+        "command": "-workbench.action.openSettings"
+    },
+    {
+        "key": "ctrl+[Comma]",
+        "command": "workbench.action.toggleZenMode"
+    },
+    {
+        "key": "ctrl+k z",
+        "command": "-workbench.action.toggleZenMode"
     }
 ]
