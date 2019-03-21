@@ -50,5 +50,12 @@
     "editor.renderControlCharacters": false,
     "zenMode.hideLineNumbers": false,
     "zenMode.hideTabs": false,
-    "cSpell.language": "en,en-GB"
+    "cSpell.language": "en,en-GB",
+    "window.menuBarVisibility": "default",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.renderFinalNewline": true
 }
