@@ -57,5 +57,14 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
-    "editor.renderFinalNewline": true
+    "editor.renderFinalNewline": true,
+    "python.jediEnabled": false,
+    "prettier.jsxSingleQuote": true,
+    "vetur.experimental.templateInterpolationService": false,
+    "vetur.experimental.templateInterpolationService": false,
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "cSpell.userWords": [
+        "Smartbjella",
+        "draggable"
+    ]
 }
