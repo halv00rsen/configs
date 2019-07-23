@@ -9,14 +9,18 @@ general {
 		color_bad = '#ba5e57'
 }
 
-#order += "read_file brightness"
+order += "read_file brightness"
 order += "volume master"
 order += "cpu_temperature 0"
 # order += "wireless wlp60s0"
-order += "disk /"
+# order += "disk /"
 order += "battery 0"
 order += "tztime local"
 
+read_file brightness {
+    path = "/home/jorgehal/bin/brightness"
+    format = "<span background='#ae78f5'> &#xf185; %content </span>"
+}
 
 cpu_temperature 0 {
         format = "<span background='#9fbe7f'> &#xf2db; %degrees°C </span>"
@@ -43,7 +47,7 @@ volume master {
 }
 
 battery 0 {
-    format = "<span background='#a3be8c'> %status%percentage %remaining (%consumption) </span>"
+    format = "<span background='#f5e042'> %status%percentage %remaining (%consumption) </span>"
     format_down = "No Battery"
     status_chr = "&#xf1e6;:"
     status_bat = "&#xf242;:"
