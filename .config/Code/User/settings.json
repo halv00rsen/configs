@@ -3,8 +3,6 @@
     "workbench.iconTheme": "file-icons",
     "workbench.colorTheme": "One Dark Pro",
     "java.errors.incompleteClasspath.severity": "ignore",
-    // Is git enabled
-    "git.enabled": false,
 
     // Path to the git executable
     "git.path": null,
@@ -66,5 +64,25 @@
     "cSpell.userWords": [
         "Smartbjella",
         "draggable"
-    ]
+    ],
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "[vue]": {
+        "editor.tabSize": 2
+    },
+    "[javascriptreact]": {
+        "editor.tabSize": 2
+    },
+    "zenMode.hideStatusBar": false,
+    "[typescript]": {
+        "editor.tabSize": 2
+    },
+    "[typescriptreact]": {
+        "editor.tabSize": 2
+    },
+    "[css]": {
+        "editor.tabSize": 2
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always"
 }

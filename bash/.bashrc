@@ -129,3 +129,5 @@ if [ -f /home/jorgehal/.tnsrc ]; then
     source /home/jorgehal/.tnsrc 
 fi
 ###-tns-completion-end-###
+
+export EDITOR=vim

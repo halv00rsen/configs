@@ -200,5 +200,36 @@
     {
         "key": "ctrl+k z",
         "command": "-workbench.action.toggleZenMode"
+    },
+    {
+        "key": "shift+tab",
+        "command": "-extension.vim_shift+tab",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "shift+alt+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+h",
+        "command": "workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "-workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "alt+l",
+        "command": "workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "ctrl+2",
+        "command": "-workbench.action.focusSecondEditorGroup"
     }
 ]
