@@ -26,7 +26,7 @@
         "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
     },
     {
-        "key": "alt+j",
+        "key": "shift+alt+j",
         "command": "editor.action.moveLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
     },
@@ -36,7 +36,7 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "alt+k",
+        "key": "shift+alt+k",
         "command": "editor.action.moveLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
     },
@@ -166,7 +166,7 @@
         "when": "editorTextFocus && vim.active"
     },
     {
-        "key": "ctrl+m",
+        "key": "alt+k",
         "command": "workbench.action.nextEditor"
     },
     {
@@ -174,7 +174,7 @@
         "command": "-workbench.action.nextEditor"
     },
     {
-        "key": "ctrl+n",
+        "key": "alt+j",
         "command": "workbench.action.previousEditor"
     },
     {
@@ -231,5 +231,13 @@
     {
         "key": "ctrl+2",
         "command": "-workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "alt+m",
+        "command": "workbench.action.decreaseViewSize"
+    },
+    {
+        "key": "alt+n",
+        "command": "workbench.action.increaseViewSize"
     }
 ]

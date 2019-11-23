@@ -89,5 +89,6 @@
         "**/__pycache__": true,
         "**/.pytest_cache": true,
         "**/*.egg-info": true
-    }
+    },
+    "editor.minimap.enabled": true
 }
