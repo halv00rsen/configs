@@ -9,6 +9,7 @@ general {
 		color_bad = '#ba5e57'
 }
 
+order += "read_file keyboard"
 order += "read_file brightness"
 order += "volume master"
 order += "cpu_temperature 0"
@@ -16,6 +17,11 @@ order += "cpu_temperature 0"
 # order += "disk /"
 order += "battery 0"
 order += "tztime local"
+
+read_file keyboard {
+    path = "/home/jorgehal/bin/keyboard"
+    format = "<span background='#FFD2D4'> &#xf11c; %content </span>"
+}
 
 read_file brightness {
     path = "/home/jorgehal/bin/brightness"

@@ -85,7 +85,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -166,16 +166,19 @@ exec --no-startup-id nm-applet
 exec --no-startup-id fusuma
 
 # Enable screen brightness (and pipe to status-bar)
-bindsym XF86MonBrightnessUp exec ~/bin/brightness.sh up
-bindsym XF86MonBrightnessDown exec ~/bin/brightness.sh down
+bindsym XF86MonBrightnessUp exec xbacklight + 10 && pkill -SIGRTMIN+11 i3blocks
+bindsym XF86MonBrightnessDown exec xbacklight - 10 && pkill -SIGRTMIN+11 i3blocks
+bindsym $mod+space exec ~/.config/i3blocks/keyboard/alter-keyboard.sh && pkill -SIGRTMIN+10 i3blocks
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -SIGRTMIN+12 i3blocks 
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -SIGRTMIN+12 i3blocks
+bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -SIGRTMIN+12 i3blocks
 
 # Remove annoying borders
 for_window [class="^.*"] border pixel 0
+
+for_window [class="Yad"] floating enable
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -193,7 +196,7 @@ bar {
         inactive_workspace      #2f343f #2f343f #d8dee8
         urgent_workspacei       #2f343f #ebcb8b #2f343f
     }
-    status_command i3status
+    status_command SCRIPT_DIR=~/.config/i3blocks i3blocks
 }
 
 # Autostarting of programs
@@ -205,3 +208,4 @@ exec --no-startup-id xautolock -time 10 -locker 'i3lock -d -c 000000'
 # Enable locking by key combo
 bindsym $mod+Control+l exec i3lock -d -c 000000
 
+# TODO: add ~/bin to configs repo

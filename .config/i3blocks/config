@@ -1,0 +1,32 @@
+
+[keyboard]
+command=$SCRIPT_DIR/keyboard/keyboard.sh
+markup=pango
+interval=once
+signal=10
+color=white
+
+[brightness]
+command=$SCRIPT_DIR/brightness.sh
+markup=pango
+interval=once
+signal=11
+
+[volume-pulseaudio]
+command=$SCRIPT_DIR/volume-pulseaudio
+interval=once
+signal=12
+# min_width=200
+# align=center
+
+[battery2]
+command=$SCRIPT_DIR/battery2
+markup=pango
+interval=30
+color=white
+
+[calendar]
+command=$SCRIPT_DIR/calendar
+color=#78ff9c
+interval=1
+
