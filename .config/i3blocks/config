@@ -19,6 +19,12 @@ signal=12
 # min_width=200
 # align=center
 
+[temperature]
+command=$SCRIPT_DIR/temperature
+label=
+interval=10
+color=white
+
 [battery2]
 command=$SCRIPT_DIR/battery2
 markup=pango

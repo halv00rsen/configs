@@ -1,7 +1,9 @@
 
+step=5
+
 case $BLOCK_BUTTON in
-    1) xbacklight + 10 ;;
-    3) xbacklight - 10 ;;
+    1) xbacklight + $step ;;
+    3) xbacklight - $step ;;
 esac
 
 brightness=`xbacklight -get`
