@@ -90,5 +90,6 @@
         "**/.pytest_cache": true,
         "**/*.egg-info": true
     },
-    "editor.minimap.enabled": true
+    "editor.minimap.enabled": true,
+    "editor.formatOnSave": true
 }

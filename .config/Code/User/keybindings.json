@@ -239,5 +239,31 @@
     {
         "key": "alt+n",
         "command": "workbench.action.increaseViewSize"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeGroup",
+        "when": "activeEditorGroupEmpty && multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "extension.vim_ctrl+w"
+    },
+    {
+        "key": "ctrl+[BracketLeft]",
+        "command": "extension.vim_ctrl+["
+    },
+    {
+        "key": "ctrl+d",
+        "command": "extension.vim_ctrl+d"
     }
 ]
