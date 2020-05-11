@@ -1,4 +1,5 @@
 syntax on
+set nocompatible
 filetype indent plugin on
 
 set tabstop=4
