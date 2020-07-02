@@ -9,6 +9,7 @@ set expandtab
 set number
 set relativenumber
 set autoindent
+set incsearch
 
 " Disable Arrow keys in Escape mode
 map <up> <nop>
