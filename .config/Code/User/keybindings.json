@@ -1,269 +1,267 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-    {
-        "key": "ctrl+w",
-        "command": "-extension.vim_ctrl+w",
-        "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+pagedown",
-        "command": "-extension.vim_ctrl+pagedown",
-        "when": "editorTextFocus && vim.active && vim.use<C-pagedown> && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+pageup",
-        "command": "-extension.vim_ctrl+pageup",
-        "when": "editorTextFocus && vim.active && vim.use<C-pageup> && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+pageup",
-        "command": "-selectPrevPageSuggestion",
-        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-    },
-    {
-        "key": "ctrl+pagedown",
-        "command": "-selectNextPageSuggestion",
-        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-    },
-    {
-        "key": "shift+alt+j",
-        "command": "editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+down",
-        "command": "-editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+k",
-        "command": "editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+up",
-        "command": "-editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+k",
-        "command": "editor.action.deleteLines",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+k",
-        "command": "-editor.action.deleteLines",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+d",
-        "command": "-extension.vim_ctrl+d",
-        "when": "editorTextFocus && vim.active && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+c",
-        "command": "-extension.vim_ctrl+c",
-        "when": "editorTextFocus && vim.active && vim.overrideCtrlC && vim.use<C-c> && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+x",
-        "command": "-extension.vim_ctrl+x",
-        "when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+7",
-        "command": "editor.action.commentLine",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+7",
-        "command": "-editor.action.commentLine",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+w j",
-        "command": "-extension.vim_navigateDown",
-        "when": "vim.active && vim.use<C-w> && !editorTextFocus"
-    },
-    {
-        "key": "ctrl+w ctrl+w",
-        "command": "-extension.vim_navigateGroups",
-        "when": "vim.active && vim.use<C-w> && !editorTextFocus"
-    },
-    {
-        "key": "ctrl+w h",
-        "command": "-extension.vim_navigateLeft",
-        "when": "vim.active && vim.use<C-w> && !editorTextFocus"
-    },
-    {
-        "key": "ctrl+w l",
-        "command": "-extension.vim_navigateRight",
-        "when": "vim.active && vim.use<C-w> && !editorTextFocus"
-    },
-    {
-        "key": "ctrl+w k",
-        "command": "-extension.vim_navigateUp",
-        "when": "vim.active && vim.use<C-w> && !editorTextFocus"
-    },
-    {
-        "key": "ctrl+v",
-        "command": "-extension.vim_ctrl+v",
-        "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl && vim.mode != 'Insert'"
-    },
-    {
-        "key": "ctrl+d",
-        "command": "-list.focusPageDown",
-        "when": "listFocus"
-    },
-    {
-        "key": "ctrl+f",
-        "command": "-extension.vim_ctrl+f",
-        "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+t",
-        "command": "-extension.vim_ctrl+t",
-        "when": "editorTextFocus && vim.active && vim.use<C-t> && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+a",
-        "command": "-extension.vim_ctrl+a",
-        "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+d",
-        "command": "-list.focusPageDown",
-        "when": "listFocus && !inputFocus"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "-extension.vim_ctrl+n",
-        "when": "editorTextFocus && vim.active && vim.use<C-n> && !inDebugRepl"
-    },
-    {
-        "key": "tab",
-        "command": "-extension.vim_tab",
-        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-    },
-    {
-        "key": "ctrl+v",
-        "command": "-extension.vim_ctrl+v",
-        "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+b",
-        "command": "-extension.vim_ctrl+b",
-        "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
-    },
-    {
-        "key": "alt+w",
-        "command": "cursorWordPartRight",
-        "when": "editorTextFocus && vim.active"
-    },
-    {
-        "key": "alt+b",
-        "command": "cursorWordPartStartLeft",
-        "when": "editorTextFocus && vim.active"
-    },
-    {
-        "key": "alt+k",
-        "command": "workbench.action.nextEditor"
-    },
-    {
-        "key": "ctrl+pagedown",
-        "command": "-workbench.action.nextEditor"
-    },
-    {
-        "key": "alt+j",
-        "command": "workbench.action.previousEditor"
-    },
-    {
-        "key": "ctrl+pageup",
-        "command": "-workbench.action.previousEditor"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "-workbench.action.files.newUntitledFile"
-    },
-    {
-        "key": "ctrl+m",
-        "command": "-editor.action.toggleTabFocusMode"
-    },
-    {
-        "key": "ctrl+[Comma]",
-        "command": "-workbench.action.openSettings"
-    },
-    {
-        "key": "ctrl+[Comma]",
-        "command": "workbench.action.toggleZenMode"
-    },
-    {
-        "key": "ctrl+k z",
-        "command": "-workbench.action.toggleZenMode"
-    },
-    {
-        "key": "shift+tab",
-        "command": "-extension.vim_shift+tab",
-        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-    },
-    {
-        "key": "shift+alt+up",
-        "command": "-editor.action.insertCursorAbove",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+alt+down",
-        "command": "-editor.action.insertCursorBelow",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+h",
-        "command": "workbench.action.focusFirstEditorGroup"
-    },
-    {
-        "key": "ctrl+1",
-        "command": "-workbench.action.focusFirstEditorGroup"
-    },
-    {
-        "key": "alt+l",
-        "command": "workbench.action.focusSecondEditorGroup"
-    },
-    {
-        "key": "ctrl+2",
-        "command": "-workbench.action.focusSecondEditorGroup"
-    },
-    {
-        "key": "alt+m",
-        "command": "workbench.action.decreaseViewSize"
-    },
-    {
-        "key": "alt+n",
-        "command": "workbench.action.increaseViewSize"
-    },
-    {
-        "key": "ctrl+w",
-        "command": "-workbench.action.closeWindow",
-        "when": "!editorIsOpen && !multipleEditorGroups"
-    },
-    {
-        "key": "ctrl+w",
-        "command": "-workbench.action.closeGroup",
-        "when": "activeEditorGroupEmpty && multipleEditorGroups"
-    },
-    {
-        "key": "ctrl+w",
-        "command": "-workbench.action.closeActiveEditor"
-    },
-    {
-        "key": "ctrl+w",
-        "command": "extension.vim_ctrl+w"
-    },
-    {
-        "key": "ctrl+[BracketLeft]",
-        "command": "extension.vim_ctrl+["
-    },
-    {
-        "key": "ctrl+d",
-        "command": "extension.vim_ctrl+d"
-    }
+  {
+    "key": "ctrl+w",
+    "command": "-extension.vim_ctrl+w",
+    "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "-extension.vim_ctrl+pagedown",
+    "when": "editorTextFocus && vim.active && vim.use<C-pagedown> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "-extension.vim_ctrl+pageup",
+    "when": "editorTextFocus && vim.active && vim.use<C-pageup> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "-selectPrevPageSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "-selectNextPageSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "shift+alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "-editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "-editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "editor.action.deleteLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "-editor.action.deleteLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-extension.vim_ctrl+d",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "-extension.vim_ctrl+c",
+    "when": "editorTextFocus && vim.active && vim.overrideCtrlC && vim.use<C-c> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+x",
+    "command": "-extension.vim_ctrl+x",
+    "when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+7",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+7",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+w j",
+    "command": "-extension.vim_navigateDown",
+    "when": "vim.active && vim.use<C-w> && !editorTextFocus"
+  },
+  {
+    "key": "ctrl+w ctrl+w",
+    "command": "-extension.vim_navigateGroups",
+    "when": "vim.active && vim.use<C-w> && !editorTextFocus"
+  },
+  {
+    "key": "ctrl+w h",
+    "command": "-extension.vim_navigateLeft",
+    "when": "vim.active && vim.use<C-w> && !editorTextFocus"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "-extension.vim_navigateRight",
+    "when": "vim.active && vim.use<C-w> && !editorTextFocus"
+  },
+  {
+    "key": "ctrl+w k",
+    "command": "-extension.vim_navigateUp",
+    "when": "vim.active && vim.use<C-w> && !editorTextFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-list.focusPageDown",
+    "when": "listFocus"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-extension.vim_ctrl+f",
+    "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "-extension.vim_ctrl+t",
+    "when": "editorTextFocus && vim.active && vim.use<C-t> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "-extension.vim_ctrl+a",
+    "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-list.focusPageDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-extension.vim_ctrl+n",
+    "when": "editorTextFocus && vim.active && vim.use<C-n> && !inDebugRepl"
+  },
+  {
+    "key": "tab",
+    "command": "-extension.vim_tab",
+    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-extension.vim_ctrl+b",
+    "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "alt+w",
+    "command": "cursorWordPartRight",
+    "when": "editorTextFocus && vim.active"
+  },
+  {
+    "key": "alt+b",
+    "command": "cursorWordPartStartLeft",
+    "when": "editorTextFocus && vim.active"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "-workbench.action.nextEditor"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "-workbench.action.previousEditor"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "-editor.action.toggleTabFocusMode"
+  },
+  {
+    "key": "ctrl+[Comma]",
+    "command": "-workbench.action.openSettings"
+  },
+  {
+    "key": "ctrl+[Comma]",
+    "command": "workbench.action.toggleZenMode"
+  },
+  {
+    "key": "ctrl+k z",
+    "command": "-workbench.action.toggleZenMode"
+  },
+  {
+    "key": "shift+tab",
+    "command": "-extension.vim_shift+tab",
+    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "-editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "-editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "ctrl+1",
+    "command": "-workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.focusSecondEditorGroup"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "-workbench.action.focusSecondEditorGroup"
+  },
+  {
+    "key": "alt+m",
+    "command": "workbench.action.decreaseViewSize"
+  },
+  {
+    "key": "alt+n",
+    "command": "workbench.action.increaseViewSize"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.closeWindow",
+    "when": "!editorIsOpen && !multipleEditorGroups"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.closeGroup",
+    "when": "activeEditorGroupEmpty && multipleEditorGroups"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "extension.vim_ctrl+w"
+  },
+  {
+    "key": "ctrl+[BracketLeft]",
+    "command": "extension.vim_ctrl+["
+  },
+  {
+    "key": "ctrl+d",
+    "command": "extension.vim_ctrl+d"
+  },
+  {
+    "key": "shift+alt+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "-workbench.view.explorer"
+  }
 ]

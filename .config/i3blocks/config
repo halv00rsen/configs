@@ -16,6 +16,8 @@ signal=11
 command=$SCRIPT_DIR/volume-pulseaudio
 interval=once
 signal=12
+# USE_DESCRIPTION=1
+# USE_ALSA_NAME=0
 # min_width=200
 # align=center
 
