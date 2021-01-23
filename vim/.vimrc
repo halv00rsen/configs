@@ -15,6 +15,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'neoclide/coc.nvim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -47,7 +48,7 @@ colorscheme solarized
 " Typescript
 
 " dark red
-hi tsxTagName guifg=#E06C75
+hi tsxTagName guifg=#FFFFFF
 hi tsxComponentName guifg=#E06C75
 hi tsxCloseComponentName guifg=#E06C75
 
@@ -114,3 +115,6 @@ else
   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
