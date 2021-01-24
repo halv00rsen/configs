@@ -25,3 +25,8 @@ sudo dpkg-reconfigure keyboard-configuration
 setxkbmap -layout <lang>
 ```
 
+# Remap keys
+```
+setxkbmap -layout us -option ctrl:nocaps
+setxkbmap -layout us -variant variant-name
+```
