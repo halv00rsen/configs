@@ -66,11 +66,6 @@
     "when": "editorTextFocus && vim.active && vim.overrideCtrlC && vim.use<C-c> && !inDebugRepl"
   },
   {
-    "key": "ctrl+x",
-    "command": "-extension.vim_ctrl+x",
-    "when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl"
-  },
-  {
     "key": "ctrl+7",
     "command": "editor.action.commentLine",
     "when": "editorTextFocus && !editorReadonly"
@@ -119,11 +114,6 @@
     "key": "ctrl+t",
     "command": "-extension.vim_ctrl+t",
     "when": "editorTextFocus && vim.active && vim.use<C-t> && !inDebugRepl"
-  },
-  {
-    "key": "ctrl+a",
-    "command": "-extension.vim_ctrl+a",
-    "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
   },
   {
     "key": "ctrl+d",
@@ -263,5 +253,24 @@
   {
     "key": "ctrl+shift+e",
     "command": "-workbench.view.explorer"
+  },
+  {
+    "key": "ctrl+k ctrl+x",
+    "command": "-editor.action.trimTrailingWhitespace",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+; x",
+    "command": "-jupyter.deleteCells",
+    "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
+  },
+  {
+    "key": "ctrl+x",
+    "command": "-filesExplorer.cut",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "-editor.action.selectAll"
   }
 ]

@@ -11,7 +11,6 @@
     "git.autofetch": false,
     "explorer.confirmDragAndDrop": false,
     "editor.lineNumbers": "relative",
-    "window.zoomLevel": 0,
     "workbench.colorCustomizations": {
         // "statusBar.background": "#666666",
         // "panel.background": "#555555",
@@ -91,5 +90,11 @@
         "**/*.egg-info": true
     },
     "editor.minimap.enabled": true,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "gitlens.hovers.currentLine.over": "line",
+    "prettier.disableLanguages": [
+        "markdown"
+    ],
+    "eslint.format.enable": true
 }
