@@ -10,20 +10,22 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-surround'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
 
 Plugin 'arcticicestudio/nord-vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'peitalin/vim-jsx-typescript'
+Plugin 'tomasiser/vim-code-dark'
 
 Plugin 'neoclide/coc.nvim'
+
+Plugin 'neoclide/coc-tsserver'
+Plugin 'sheerun/vim-polyglot'
+
 " Plugin 'styled-components/vim-styled-components'
 " Plugin 'hail2u/vim-css3-syntax'
+
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
-Plugin 'vim-airline/vim-airline'
-Plugin 'ctrlpvim/ctrlp.vim'
-" Plugin 'HerringtonDarkholme/yats.vim'
-" Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -48,12 +50,34 @@ imap <left> <nop>
 imap <right> <nop>
 
 syntax on
-colorscheme nord
+" colorscheme nord
+colorscheme codedark
+
+let g:airline_theme = 'codedark'
+
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
+nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+set signcolumn=yes
+set cursorline
 
 " Typescript
 
 " set filetypes as typescriptreact
-" autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+
+" hi typescriptVariableDeclaration guifg=#ffcf40
+" hi typescriptBlock guifg=#ffcf40
+" hi typescriptParens guifg=#FFFFFF
 
 " light green
 " hi tsxTagName guifg=#bae4cc
