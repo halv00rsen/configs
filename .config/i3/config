@@ -95,7 +95,7 @@ bindsym $mod+a focus parent
 
 # switch to workspace
 bindsym $mod+1 workspace 1:Terminal
-bindsym $mod+2 workspace 2:Opera; exec [ $(ps h -C opera | wc -l) = 0 ] && opera #autostart Opera
+bindsym $mod+2 workspace 2:Web; exec [ $(ps h -C brave | wc -l) = 0 ] && brave-browser #autostart Brave browser
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
