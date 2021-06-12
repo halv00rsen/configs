@@ -21,9 +21,10 @@ Plugin 'neoclide/coc.nvim'
 Plugin 'neoclide/coc-tsserver'
 Plugin 'sheerun/vim-polyglot'
 
-" Plugin 'styled-components/vim-styled-components'
-" Plugin 'hail2u/vim-css3-syntax'
+Plugin 'tpope/vim-commentary'
+Plugin 'styled-components/vim-styled-components'
 
+Plugin 'preservim/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 
@@ -36,6 +37,12 @@ set relativenumber
 set autoindent
 set incsearch
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+
+let mapleader=","
+
+" :W sudo saves the file
+" (useful for handling the permission-denied error)
+command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 " Disable Arrow keys in Escape mode
 map <up> <nop>
@@ -50,7 +57,6 @@ imap <left> <nop>
 imap <right> <nop>
 
 syntax on
-" colorscheme nord
 colorscheme codedark
 
 let g:airline_theme = 'codedark'
@@ -69,65 +75,6 @@ set shortmess+=c
 " diagnostics appear/become resolved.
 set signcolumn=yes
 set cursorline
-
-" Typescript
-
-" set filetypes as typescriptreact
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
-
-" hi typescriptVariableDeclaration guifg=#ffcf40
-" hi typescriptBlock guifg=#ffcf40
-" hi typescriptParens guifg=#FFFFFF
-
-" light green
-" hi tsxTagName guifg=#bae4cc
-" hi tsxComponentName guifg=#bae4cc
-" hi tsxCloseComponentName guifg=#bae4cc
-" 
-" " orange
-" hi tsxCloseString guifg=#F99575
-" hi tsxCloseTag guifg=#F99575
-" hi tsxCloseTagName guifg=#F99575
-" hi tsxAttributeBraces guifg=#F99575
-" hi tsxEqual guifg=#F99575
-" 
-" " yellow
-" hi tsxAttrib guifg=#F8BD7F cterm=italic
-" 
-" hi ReactState guifg=#C176A7
-" hi ReactProps guifg=#D19A66
-" hi ApolloGraphQL guifg=#CB886B
-" hi Events ctermfg=204 guifg=#56B6C2
-" hi ReduxKeywords ctermfg=204 guifg=#C678DD
-" hi ReduxHooksKeywords ctermfg=204 guifg=#C176A7
-" hi WebBrowser ctermfg=204 guifg=#56B6C2
-" hi ReactLifeCycleMethods ctermfg=204 guifg=#D19A66
-
-" dark red
-" hi tsxTagName guifg=red
-" hi tsxTagName guifg=#FFFFFF
-" hi tsxComponentName guifg=#E06C75
-" hi tsxCloseComponentName guifg=#E06C75
-" 
-" " orange
-" hi tsxCloseString guifg=#F99575
-" hi tsxCloseTag guifg=#F99575
-" hi tsxCloseTagName guifg=#F99575
-" hi tsxAttributeBraces guifg=#F99575
-" hi tsxEqual guifg=#F99575
-" 
-" " yellow
-" hi tsxAttrib guifg=#F8BD7F cterm=italic
-" 
-" hi ReactState guifg=#C176A7
-" hi ReactProps guifg=#D19A66
-" hi ApolloGraphQL guifg=#CB886B
-" hi Events ctermfg=204 guifg=#56B6C2
-" hi ReduxKeywords ctermfg=204 guifg=#C678DD
-" hi ReduxHooksKeywords ctermfg=204 guifg=#C176A7
-" hi WebBrowser ctermfg=204 guifg=#56B6C2
-" hi ReactLifeCycleMethods ctermfg=204 guifg=#D19A66
-" End typescript
 
 " Set truecolors for vim in combo tmux
 if (has("termguicolors"))
@@ -210,3 +157,81 @@ function! VisualSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+
+" Set to auto read when a file is changed from the outside
+" set autoread
+" au FocusGained,BufEnter * checktime
+
+
+" Set 7 lines to the cursor - when moving vertically using j/k
+set so=7
+set wildmenu
+
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+if has("win16") || has("win32")
+    set wildignore+=.git\*,.hg\*,.svn\*,node_modules\*
+else
+    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+endif
+
+" Ignore case when searching
+set ignorecase
+
+" When searching try to be smart about cases
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw
+
+" Show matching brackets when text indicator is over them
+" set showmatch
+" How many tenths of a second to blink when matching brackets
+" set mat=2
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+" Add a bit extra margin to the left
+set foldcolumn=1
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+" Turn backup off, since most stuff is in SVN, git etc. anyway...
+set nobackup
+set nowb
+set noswapfile
+
+" Return to last edit position when opening files (You want this!)
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" Remap VIM 0 to first non-blank character
+map 0 ^
+
+" NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-b> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+" Disable highlight when <leader><cr> is pressed
+map <silent> <leader><cr> :noh<cr>
+
+nmap <C-j> mz:m+<cr>`z
+nmap <C-k> mz:m-2<cr>`z
+vmap <C-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <C-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
