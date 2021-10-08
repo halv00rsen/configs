@@ -28,6 +28,8 @@ Plugin 'preservim/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 
+Plugin 'prettier/vim-prettier'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -122,6 +124,8 @@ endif
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_show_hidden = 1
 
 " Use fontawesome icons as signs
 let g:gitgutter_sign_added = '+'
@@ -235,3 +239,5 @@ nmap <C-k> mz:m-2<cr>`z
 vmap <C-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <C-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
+let g:prettier#autoformat_require_pragma = 0
+let g:prettier#autoformat_config_present = 1
