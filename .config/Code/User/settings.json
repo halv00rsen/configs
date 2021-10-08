@@ -91,10 +91,10 @@
     },
     "editor.minimap.enabled": true,
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "gitlens.hovers.currentLine.over": "line",
     "prettier.disableLanguages": [
         "markdown"
     ],
-    "eslint.format.enable": true
+    "eslint.format.enable": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

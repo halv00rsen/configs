@@ -107,7 +107,7 @@ bindsym $mod+0 workspace 10:Spotify; exec [ $(ps h -C spotify | wc -l) = 0 ] && 
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1:Terminal
-bindsym $mod+Shift+2 move container to workspace 2:Opera
+bindsym $mod+Shift+2 move container to workspace 2:Web
 bindsym $mod+Shift+3 move container to workspace 3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
