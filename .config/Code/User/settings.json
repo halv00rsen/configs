@@ -1,100 +1,74 @@
 {
-    "extensions.ignoreRecommendations": false,
-    "workbench.iconTheme": "file-icons",
-    "workbench.colorTheme": "One Dark Pro",
-    "java.errors.incompleteClasspath.severity": "ignore",
+  "extensions.ignoreRecommendations": false,
+  "workbench.iconTheme": "file-icons",
+  "java.errors.incompleteClasspath.severity": "ignore",
 
-    // Path to the git executable
-    "git.path": null,
+  // Path to the git executable
+  "git.path": null,
 
-    // Whether auto fetching is enabled.
-    "git.autofetch": false,
-    "explorer.confirmDragAndDrop": false,
-    "editor.lineNumbers": "relative",
-    "workbench.colorCustomizations": {
-        // "statusBar.background": "#666666",
-        // "panel.background": "#555555",
-        // "sideBar.background": "#444444",
-        "editorActiveLineNumber.foreground": "#ffffff"
-    },
-    "[html]": {
-        "editor.quickSuggestions": {
-            "other": true,
-            "comments": false,
-            "strings": true
-        }
-    },
-    "latex-workshop.view.pdf.viewer": "tab",
-    "vim.otherModesKeyBindingsNonRecursive": [
-        {
-            "before": ["j"],
-            "after": ["g", "j"]
-        },
-        {
-            "before": ["k"],
-            "after": ["g", "k"]
-        }
-    ],
-    "editor.parameterHints": false,
-    "breadcrumbs.enabled": true,
-    "eslint.alwaysShowStatus": true,
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "vue"
-    ],
-    "editor.renderWhitespace": "none",
-    "editor.renderControlCharacters": false,
-    "zenMode.hideLineNumbers": false,
-    "zenMode.hideTabs": false,
-    "cSpell.language": "en,en-GB",
-    "window.menuBarVisibility": "default",
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "editor.renderFinalNewline": true,
-    "python.jediEnabled": false,
-    "prettier.jsxSingleQuote": true,
-    "vetur.experimental.templateInterpolationService": false,
-    "vetur.experimental.templateInterpolationService": false,
-    "java.configuration.checkProjectSettingsExclusions": false,
-    "cSpell.userWords": [
-        "Smartbjella",
-        "draggable"
-    ],
-    "[javascript]": {
-        "editor.tabSize": 2
-    },
-    "[vue]": {
-        "editor.tabSize": 2
-    },
-    "[javascriptreact]": {
-        "editor.tabSize": 2
-    },
-    "zenMode.hideStatusBar": false,
-    "[typescript]": {
-        "editor.tabSize": 2
-    },
-    "[typescriptreact]": {
-        "editor.tabSize": 2
-    },
-    "[css]": {
-        "editor.tabSize": 2
-    },
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "files.exclude": {
-        "**/__pycache__": true,
-        "**/.pytest_cache": true,
-        "**/*.egg-info": true
-    },
-    "editor.minimap.enabled": true,
-    "editor.formatOnSave": true,
-    "gitlens.hovers.currentLine.over": "line",
-    "prettier.disableLanguages": [
-        "markdown"
-    ],
-    "eslint.format.enable": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // Whether auto fetching is enabled.
+  "git.autofetch": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.lineNumbers": "relative",
+  "workbench.colorCustomizations": {
+    "editorLineNumber.activeForeground": "#ffffff"
+  },
+  "[html]": {
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    }
+  },
+  "editor.parameterHints.enabled": true,
+  "breadcrumbs.enabled": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": ["javascript", "javascriptreact", "vue"],
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideTabs": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.renderFinalNewline": true,
+  "prettier.jsxSingleQuote": true,
+  "vetur.experimental.templateInterpolationService": false,
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[vue]": {
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.tabSize": 2
+  },
+  "zenMode.hideStatusBar": false,
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "[typescriptreact]": {
+    "editor.tabSize": 2
+  },
+  "[css]": {
+    "editor.tabSize": 2
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/*.egg-info": true
+  },
+  "editor.minimap.enabled": true,
+  "gitlens.hovers.currentLine.over": "line",
+  "eslint.format.enable": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "python.languageServer": "None",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.formatOnSave": false
+  }
 }
