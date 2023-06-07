@@ -1,4 +1,3 @@
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -13,7 +12,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 
-Plugin 'arcticicestudio/nord-vim'
 Plugin 'tomasiser/vim-code-dark'
 
 Plugin 'neoclide/coc.nvim'
@@ -22,13 +20,11 @@ Plugin 'neoclide/coc-tsserver'
 Plugin 'sheerun/vim-polyglot'
 
 Plugin 'tpope/vim-commentary'
-Plugin 'styled-components/vim-styled-components'
+" Plugin 'styled-components/vim-styled-components'
 
 Plugin 'preservim/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
-
-Plugin 'prettier/vim-prettier'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -58,7 +54,7 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
-syntax on
+syntax enable
 colorscheme codedark
 
 let g:airline_theme = 'codedark'
@@ -124,8 +120,6 @@ endif
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-let g:ctrlp_show_hidden = 1
 
 " Use fontawesome icons as signs
 let g:gitgutter_sign_added = '+'
@@ -205,6 +199,9 @@ set novisualbell
 set t_vb=
 set tm=500
 
+" Use new regular expression engine, make syntax highlighting with ts work
+set re=0
+
 " Add a bit extra margin to the left
 set foldcolumn=1
 
@@ -238,6 +235,3 @@ nmap <C-j> mz:m+<cr>`z
 nmap <C-k> mz:m-2<cr>`z
 vmap <C-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <C-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
-let g:prettier#autoformat_require_pragma = 0
-let g:prettier#autoformat_config_present = 1
